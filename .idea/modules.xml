@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ausbildung.iml" filepath="$PROJECT_DIR$/ausbildung.iml" />
       <module fileurl="file://$PROJECT_DIR$/objektOrientierungStart/fotografie/fotografie.iml" filepath="$PROJECT_DIR$/objektOrientierungStart/fotografie/fotografie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/objektOrientierungStart/linkedList/linkedList.iml" filepath="$PROJECT_DIR$/objektOrientierungStart/linkedList/linkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/objektOrientierungStart/objektOrientierungStart.iml" filepath="$PROJECT_DIR$/objektOrientierungStart/objektOrientierungStart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/objektOrientierungStart/queue/queue.iml" filepath="$PROJECT_DIR$/objektOrientierungStart/queue/queue.iml" />
     </modules>
   </component>
 </project>
