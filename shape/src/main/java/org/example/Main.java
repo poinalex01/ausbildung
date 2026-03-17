@@ -1,3 +1,8 @@
+import org.example.Circle;
+import org.example.Rectangle;
+import org.example.Shape;
+import org.example.Square;
+
 void main() {
     Shape[] shapes = new Shape[4];
     shapes[0] = new Rectangle(4.0, 4.5);
