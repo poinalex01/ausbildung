@@ -10,8 +10,9 @@
         <module name="database" />
         <module name="personenVerwaltung" />
         <module name="shape" />
-        <module name="fahrzeuge" />
         <module name="testerino" />
+        <module name="unittesting" />
+        <module name="fahrzeuge" />
       </profile>
     </annotationProcessing>
   </component>
