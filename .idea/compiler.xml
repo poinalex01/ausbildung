@@ -13,6 +13,7 @@
         <module name="testerino" />
         <module name="unittesting" />
         <module name="fahrzeuge" />
+        <module name="exceptions" />
       </profile>
     </annotationProcessing>
   </component>

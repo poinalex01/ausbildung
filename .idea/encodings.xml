@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/database/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/database/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exceptions/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exceptions/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fahrzeuge/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fahrzeuge/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/objektOrientierung2/personenVerwaltung/src/main/java" charset="UTF-8" />
