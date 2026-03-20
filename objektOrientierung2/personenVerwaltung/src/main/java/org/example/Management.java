@@ -1,7 +1,10 @@
 package org.example;
 
+import org.example.exceptions.ItemNotFoundException;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Management {
@@ -38,6 +41,16 @@ public class Management {
         Person p = new Person(firstName, lastName, gender, address, birthDate);
         personList.add(p);
         return p;
+    }
+
+    public Person getPerson(String name) {
+        for (Person currentPerson : personList) {
+            if (currentPerson.getName().equals(name)) {
+                return currentPerson;
+            }
+        }
+
+        throw new ItemNotFoundException("Person could not be found!");
     }
 
     public List<Person> getPersonList() {

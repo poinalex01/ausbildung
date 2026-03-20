@@ -1,8 +1,44 @@
 package org.example;
 
-import java.time.LocalDate;
+import org.example.exceptions.InvalidPersonNameException;
+import org.example.exceptions.ItemNotFoundException;
+
+import java.util.Scanner;
 
 public class Main {
+    static void main() {
+        Scanner scanner = new Scanner(System.in);
+
+        Person person = null;
+        do {
+            System.out.println("Enter firstname:");
+            String firstname = scanner.nextLine();
+            System.out.println("Enter lastname:");
+            String lastname = scanner.nextLine();
+            try {
+                person = new Person(firstname, lastname);
+            } catch (InvalidPersonNameException e) {
+                System.out.println(e.getMessage());
+            }
+        } while (person == null);
+
+        System.out.println("SUCCESSFULLY CREATE PERSON " + person);
+
+
+        Management management = new Management("ManagementName");
+        management.createPerson(person);
+        System.out.println("management.getPerson(person.getName()) = " + management.getPerson(person.getName()));
+
+        System.out.println("Enter the full name of the person ure searching:");
+
+        try {
+            System.out.println(management.getPerson(scanner.nextLine()));
+        } catch (ItemNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /*
     static void main() {
         Administration administration = new Administration();
 
@@ -83,4 +119,5 @@ public class Main {
 
         System.out.println(administration);
     }
+     */
 }

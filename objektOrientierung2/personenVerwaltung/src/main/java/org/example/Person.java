@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.exceptions.InvalidPersonNameException;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -30,6 +32,10 @@ public class Person {
     }
 
     public Person(String firstName, String lastName) {
+        if ((firstName+lastName).matches(".*\\d.*")) {
+            throw new InvalidPersonNameException("Name is not allowed to contain digits!");
+        }
+
         if (firstName == null || firstName.isBlank()) {
             System.out.println("firstName cannot be null or blank!: set to 'UNKNOWN'");
             this.firstName = "UNKNOWN";
