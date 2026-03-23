@@ -12,58 +12,46 @@ public class Person {
     private Address address;
     private LocalDate dateOfBirth;
 
+
     public Person(String firstName, String lastName, Gender gender, Address address) {
         if (firstName == null || firstName.isBlank()) {
-            System.out.println("firstName cannot be null or blank!: set to 'UNKNOWN'");
-            this.firstName = "UNKNOWN";
-        } else {
-            this.firstName = firstName;
+            throw new InvalidPersonNameException("firstName cannot be null or blank!");
         }
 
         if (lastName == null || lastName.isBlank()) {
-            System.out.println("lastName cannot be null or blank!: set to 'UNKNOWN'");
-            this.lastName = "UNKNOWN";
-        } else {
-            this.lastName = lastName;
+            throw new InvalidPersonNameException("lastName cannot be null or blank!");
         }
 
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.gender = gender;
         this.address = address;
     }
 
     public Person(String firstName, String lastName) {
-        if ((firstName+lastName).matches(".*\\d.*")) {
+        if ((firstName + lastName).matches(".*\\d.*")) {
             throw new InvalidPersonNameException("Name is not allowed to contain digits!");
         }
 
         if (firstName == null || firstName.isBlank()) {
-            System.out.println("firstName cannot be null or blank!: set to 'UNKNOWN'");
-            this.firstName = "UNKNOWN";
-        } else {
-            this.firstName = firstName;
+            throw new InvalidPersonNameException("firstName cannot be null or blank!");
         }
 
         if (lastName == null || lastName.isBlank()) {
-            System.out.println("lastName cannot be null or blank!: set to 'UNKNOWN'");
-            this.lastName = "UNKNOWN";
-        } else {
-            this.lastName = lastName;
+            throw new InvalidPersonNameException("lastName cannot be null or blank!");
         }
+
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public Person(String firstName, String lastName, Gender gender, Address address, LocalDate dateOfBirth) {
         if (firstName == null || firstName.isBlank()) {
-            System.out.println("firstName cannot be null or blank!: set to 'UNKNOWN'");
-            this.firstName = "UNKNOWN";
-        } else {
-            this.firstName = firstName;
+            throw new InvalidPersonNameException("firstName cannot be null or blank!");
         }
 
         if (lastName == null || lastName.isBlank()) {
-            System.out.println("lastName cannot be null or blank!: set to 'UNKNOWN'");
-            this.lastName = "UNKNOWN";
-        } else {
-            this.lastName = lastName;
+            throw new InvalidPersonNameException("lastName cannot be null or blank!");
         }
 
         if (dateOfBirth != null && dateOfBirth.isAfter(LocalDate.now())) {
@@ -73,6 +61,9 @@ public class Person {
             this.dateOfBirth = dateOfBirth;
         }
 
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
         this.gender = gender;
         this.address = address;
     }
